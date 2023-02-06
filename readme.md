@@ -7,7 +7,7 @@
 
 # **4Dev React - Enquetes para Programadores**
 
-[![alt text](./public/course-logo.png )]
+[![alt text](./public/readme-logo.png )]
 
 ---
 
