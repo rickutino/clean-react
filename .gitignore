@@ -2,3 +2,4 @@ node_modules
 .vscode
 coverage
 .gitpod.yml
+public/js/bundle.js
