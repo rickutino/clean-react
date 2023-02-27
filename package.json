@@ -7,7 +7,8 @@
     "test": "jest --passWithNoTests",
     "test:watch": "jest  --passWithNoTests --watch",
     "test:staged": "jest  --passWithNoTests --findRelatedTests",
-    "test:ci": "jest  --passWithNoTests --coverage"
+    "test:ci": "jest  --passWithNoTests --coverage",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -27,7 +28,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-standard": "^5.0.0",
     "git-commit-msg-linter": "^4.5.0",
-    "husk": "^0.5.3",
+    "husky": "^8.0.3",
     "jest": "^29.4.1",
     "lint-staged": "^13.1.0",
     "ts-jest": "^29.0.5",
