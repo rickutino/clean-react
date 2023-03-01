@@ -1,6 +1,7 @@
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const path = require("path");
 
+// npm i -D clean-webpack-plugin eslint-plugin-react css-loader node-sass sass-loader style-loader ts-loader identity-obj-proxy
 module.exports = {
   mode: 'development',
   entry: './src/main/index.tsx',
