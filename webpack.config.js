@@ -1,7 +1,8 @@
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const path = require("path");
 
-// npm i -D clean-webpack-plugin eslint-plugin-react css-loader node-sass sass-loader style-loader ts-loader identity-obj-proxy
+// npm i http-proxy-middleware
+// npm i -D clean-webpack-plugin webpack webpack-cli webpack-dev-server webpack-merge eslint-plugin-react css-loader node-sass sass-loader style-loader ts-loader identity-obj-proxy
 module.exports = {
   mode: 'development',
   entry: './src/main/index.tsx',
@@ -39,13 +40,19 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: './public',
-    writeToDisk: true, // essa linha faz o devServer levantar o servidor e ao mesmo tempo gerar a bundles.js, sem essa opcao o bundle so sera gerado em memoria.
-    historyApiFallback: true, // isso faz o devServer lidar com outras rotas alem do index inicial posibilitando navegar por outras rotas na aplicacao.(react-router-dom)
+    static: './public',
+    devMiddleware:{
+      writeToDisk: true, // essa linha faz o devServer levantar o servidor e ao mesmo tempo gerar a bundles.js, sem essa opcao o bundle so sera gerado em memoria.
+    },
+    historyApiFallback:{
+      rewrites: [
+        { from: /./, to: '/index.html' } // isso faz o devServer lidar com outras rotas alem do index inicial posibilitando navegar por outras rotas na aplicacao.(react-router-dom)
+      ]
+    },
   },
-  external: {
+  externals: {
     react: 'React',
-    'react-dom': 'ReactDom'
+    'react-dom': 'ReactDOM'
   }, //essa expecificao faz que o scrit no index.html incluido aqui nao seja feito o bundle junto.
   plugins: [
     new CleanWebpackPlugin()
