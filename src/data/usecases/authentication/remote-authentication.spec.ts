@@ -1,9 +1,7 @@
 import { RemoteAuthentication } from './remote-authentication'
 import { InvalidCredentialsError, UnexpectedError } from '@/domain/errors'
 import { mockAccountModel, mockAuthentication } from '@/domain/test'
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { AccountModel } from '@/domain/models'
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { AuthenticationParams } from '@/domain/usecases'
 import { HttpPostClientSpy } from '@/data/test'
 import { HttpStatusCode } from '@/data/protocols/http'
