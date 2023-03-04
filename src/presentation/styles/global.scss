@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smooyhing: antialiased;
+}
+
+:root {
+  --white: #FFF;
+  --black: #000;
+  --background: #F2F2F2;
+  --primary: #880E4F;
+  --primary-dark: #560027;
+  --primary-light: #BC477B;
+}
+
+body {
+  background-color: var(--background);
+}

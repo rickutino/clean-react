@@ -8,14 +8,24 @@
     "standard-with-typescript",
     "plugin:react/recommended"
   ],
-  "plugin": ["react"],
+  "plugins": ["react"],
   "parserOptions": {
-    "projects": "./tsconfig.json"
+    "project": "./tsconfig.json"
   },
   "rules": {
     "@typescript-eslint/consistent-type-definitions": "off",
     "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/no-unused-vars": "off",
     "react/jsx-uses-react": "error",
-    "react/jsx-uses-vars": "error"
+    "react/jsx-uses-vars": "error",
+    "react/prop-types": [
+      "error",
+      {
+        "ignore": [
+          "className"
+        ]
+      }
+    ]
   }
 }
