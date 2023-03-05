@@ -1,15 +1,12 @@
 import React from 'react'
 import Spinner from '@/presentation/components/spinner/spinner'
 import Styles from './login-styles.scss'
-import Logo from '@/presentation/components/logo/logo'
+import LoginHeader from '@/presentation/components/login-header/login-header'
 
 const Login: React.FC = () => {
   return (
     <div className={Styles.login}>
-      <header className={Styles.header}>
-        <Logo />
-        <h1>4Dev - Polls for programmers</h1>
-      </header>
+      <LoginHeader /> {/* You can use this component when you need it on Login or SignIn pages. */}
       <form className={Styles.form}>
         <h2>Login</h2>
         <div className={Styles.inputWrap}>
