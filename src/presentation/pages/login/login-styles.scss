@@ -49,6 +49,14 @@ button {
 
     .submit {
       margin-top: 3.2rem;
+
+      &:disabled {
+        background-color: var(--disabled-backbround);
+        color: var(--disabled-color);
+        &:hover {
+          opacity: 1;
+        }
+      }
     }
 
     .link {
