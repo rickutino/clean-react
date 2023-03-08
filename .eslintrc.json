@@ -23,7 +23,8 @@
       "error",
       {
         "ignore": [
-          "className"
+          "className",
+          "name"
         ]
       }
     ]
